@@ -1,0 +1,40 @@
+.quickview {
+  z-index: 99999;
+  .modal-dialog {
+    width: calc(100% - 30px);
+    max-width: 1024px;
+  }
+  .modal-content {
+    min-height: 500px;
+  }
+  .modal-header {
+    border: none;
+    padding: $small-space;
+  }
+  .modal-body {
+    min-height: 462px;
+  }
+  .modal-footer {
+    border-top: 1px solid rgba($gray,.3);
+  }
+  .layer {
+    display: none;
+  }
+  .images-container {
+    @media (max-width: 991px){
+      margin-bottom: 30px;
+      max-width: 500px;
+      margin: auto;
+    }
+  }
+  .mask {
+    width: 380px;
+    height: 88px;
+    margin: auto;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .social-sharing {
+    @include rtl-margin($small-space,$medium-space,0px,$small-space);
+  }
+}

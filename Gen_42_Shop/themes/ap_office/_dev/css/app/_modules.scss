@@ -1,0 +1,128 @@
+// modules.scss
+
+@import "vars/modules.vars";
+// top bar module dropdown
+.popup-over{
+    position: relative;
+    color: $theme-color-secondary;
+    @include rtl-float-right();
+    @include rtl-margin-left(10px);
+    padding: 12px 0;
+    .popup-title{
+        &:hover{
+            color: $link-hover-color !important;
+        }
+    }
+    .popup-content{
+        padding: 10px;
+        margin: 0;
+        position: absolute;
+        top: 100%;
+        left: inherit;
+        @include rtl-right(0);
+        background: $white;
+        border: $main-border;
+        min-width: 130px;
+        z-index: 999;
+        display: none;
+        @include rtl-text-align-left();
+        @include transition(opacity 0.3s linear 0s);
+        @include border-radius(0);
+        a{
+            color: $theme-color-senary;
+            padding: 0px;
+            font-size: 13px;
+            &:hover{
+                color: $link-hover-color;
+            }
+            .material-icons{
+                font-size: 14px;
+                width: 20px;
+            }
+        }
+        li{
+            display: block;
+            padding: 5px 0;
+            &.current{
+                color: $theme-color-default;
+                a{
+                    color: $theme-color-default;
+                    img{
+                        width: 18px;
+                        height: 13px;
+                        padding: 1px;
+                        border: 1px solid $theme-color-default;
+                    }
+                }
+            }
+        }
+        .ap-total{
+            &:before{
+                content: '(';
+                display: inline-block;
+            }
+            &:after{
+                content: ')';
+                display: inline-block;
+            }
+        }
+    }
+    .fa{
+        font-size: 16px;
+    }
+    &:hover{
+        cursor: pointer; 
+        .popup-title{
+            color: $theme-color-default;
+        }
+        .popup-content{
+            display: block !important;
+            visibility: visible;
+        }
+    }
+}  
+#header_user_info{
+    margin: 0;
+    padding: 12px 0;
+    li{
+        display: inline-block;
+        a{
+            @include rtl-margin-right(10px);
+            padding: 0;
+        }
+    }
+}
+/* mini basket */
+#cart-block{        
+    position: relative; 
+    @media (min-width: 992px){
+        padding: 13px 0;
+    }
+    .cart-preview {
+        .header{
+            position: relative;
+            @include display(inline-flex);
+            @include align-items(center);
+            a{
+                position: relative;
+                @include display(flex);
+                @include align-items(center);
+            }
+        }
+        .title_cart{
+            background-image: url(../img/bg-cart.png);
+            width: 42px;
+            height: 42px;
+            display: inline-block;
+        }
+        .cart-quantity{
+            @include rtl-margin-left(10px);
+        }
+        .body {
+            display: none;
+        }
+    }
+    .cart-products-count{
+        font-size: $font-size-sm;
+    }
+}

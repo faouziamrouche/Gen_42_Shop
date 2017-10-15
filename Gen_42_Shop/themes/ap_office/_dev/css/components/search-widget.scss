@@ -1,0 +1,98 @@
+.search-widget {
+  @include search-box;
+}
+
+#checkout {
+  #search_widget {
+    display: none; /* Not ideal solution by allows to reuse same hooks/templates */
+  }
+}
+
+#pagenotfound {
+  .page-content {
+    #search_widget {
+      width: 100%;
+    }
+  }
+}
+#header{
+  #search_widget{
+    position: relative;
+    padding-top: 5px;
+    display: inline-block;
+    width: 100%;
+    .form-search{
+      z-index: 9;
+      min-width: 100%;
+      top: 100%;
+      display: inline-block;
+      @include transition(all 0.3s ease 0s);
+      &:hover,&:active,&:focus{
+        border-color: $theme-color-default;
+        &:before{
+          border-bottom-color: $theme-color-default;
+        }
+      }
+      .search_query{
+        position: relative;
+        height: 32px;
+        min-width: 100%;
+        @include rtl-padding(6px,40px,6px,12px);
+        @include rtl-right(0);
+        border: 1px solid #e3e3e3;
+        background: #f7f7f7;
+        @include transition(width 0.5s ease 0s);
+        @include border-radius(0);
+        &:hover,&:active,&:focus{
+          outline: 0;
+        }
+      }
+      .search-button{
+        @include rtl-right(0);
+        top: 0;
+        height: 32px;
+        background: $theme-color-default;
+        color: $white;
+        cursor: pointer;
+        text-align: center;
+        @include border-radius(0);
+        @include transition(all 0.3s ease 0s);
+        &:hover,&:active,&:focus{
+          outline: 0;
+          background-position: 0 -33px;
+          @include transition(all 0.3s ease 0s);
+          background: $theme-color-secondary;
+        }
+      }
+      
+    }
+    &.showsearch{
+      .form-search{
+        @include opacity(1);
+        @include transform(scale(1));
+        @include transition(all 0.3s ease 0s);
+      }
+      
+    }
+  }
+}
+ 
+#click_show_search{
+  display: none;
+  cursor: pointer;
+}
+/*** Responsive part ***/
+
+@include media-breakpoint-down(sm) {
+  .header-top {
+    .search-widget {
+      form {
+        margin: 0 auto;
+        input[type="text"] {
+          min-width: inherit;
+          background: white;
+        }
+      }
+    }
+  }
+}

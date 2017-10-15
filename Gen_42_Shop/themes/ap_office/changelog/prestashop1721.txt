@@ -1,0 +1,11 @@
+/**************************************************
+	Changelog Of Prestashop 1.7.2.1
+**************************************************/
+**** File css ****
+- \assets\css\theme.css
+
+**** File TPL ****
+- \modules\ps_imageslider\views\templates\hook\slider.tpl
+- \modules\ps_linklist\views\templates\hook\linkblock.tpl
+- \templates\catalog\_partials\miniatures\pack-product.tpl
+- \templates\customer\password-email.tpl

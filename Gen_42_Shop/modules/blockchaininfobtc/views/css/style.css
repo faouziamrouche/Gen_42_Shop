@@ -1,0 +1,65 @@
+.invoice-heading-right {
+  float:right;
+  margin-top: 1.0rem;
+}
+
+.invoice .progress {
+  height: 14px;
+  border-radius: 0px;
+}
+
+.invoice-amount {
+  float:left;
+  margin-bottom:15px;
+}
+
+.invoice-amount h4 {
+  text-align:center;
+}
+
+.invoice-status {
+  float:right;
+}
+
+.invoice-status h4 {
+  text-align:center;
+}
+
+.qr-enclosure {
+  margin:auto;
+  width:50%;
+}
+
+.value {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+
+.input-group-addon h4 {
+  padding:10px;
+  text-align:center;
+}
+
+.invoice h3 {
+  margin:10px;
+  text-align:center;
+}
+
+#footer {
+    box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2);
+    padding: .9375rem;
+    background: #fff;
+    color: #7a7a7a;
+}
+
+@media (max-width: 970px) {
+  .invoice {
+    width:100%;
+  }
+}
+
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
